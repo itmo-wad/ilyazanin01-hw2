@@ -1,0 +1,47 @@
+	<title>Resume</title>
+	<link rel="stylesheet" href="../static/style.css">
+	<div class="base">
+	<div class="left">
+	<img src={{ avatar }}  width="220" height="260">
+	<h1>{{ username }}</h1>
+          <h3>Information Security Engineer</h3>
+	  <a href="/chpic">Change avatar</a>
+	  <p></p>
+	  <a href="chprofile">Update profile</a>
+	  <p></p>
+	  <a href="/chpass">Change password</a>
+	  <p></p>
+	  <a href="/logout">Log out</a>
+	</div>
+	<div class="right">
+	<p>Last modified: {{timestamp}}</p>
+          <h2>Summary</h2>
+	  <p>
+	  {% if summary is not none %}
+	  {{ summary }} 
+	  {% else %} 
+	  Information security engineer mainly engaged in improving attack monitoring and incident prevention
+	  {% endif %}</p>
+        
+          <h2>Work Experience</h2>
+              <h3>Company A</h3>
+              <h4>Penetration testing intern</h4>
+              <p>Searching for vulnerabilities in balancer firmware</p>
+              <h4>Nov 2021-Jul 2022</h4>
+          
+              <h3>Company B</h3>
+              <h4>Information security engineer</h4>
+              <p>Incident Response, Threat Hunting</p>
+              <h4>Jul 2022 - present</h4>
+
+	   <h2>Skills, technologies and activities</h2>
+              <ul>
+                <li>Splunk</li>
+                <li>volatility, AutoPsy, FTK Imager</li>
+		<li>Wireshark, tcpdump, Zui</li>
+		<li>Burp Suite, dirbuster, Metasploit, sqlmap</li>
+		<li>Windows Active Directory, Linux</li>
+		<li>Python, C, Bash</li>
+              </ul>
+	      </div>
+	</div>

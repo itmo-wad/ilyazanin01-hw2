@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+<link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+
+<style>
+form {
+    background-color: lightgrey;
+    width: 300px;
+    height: 220px;
+    text-align: center;
+    border: 5px solid #3e56c4;
+    padding: 20px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+}
+label {
+    float: left;
+    margin: 5px 0px;
+}
+
+</style>
+
+<form action="/chpic" enctype="multipart/form-data" method="post">
+    <label>Upload new avatar for your profile</label>
+    <label>
+        <input type="file" name="file">
+    </label>
+    <label>
+      <input class="button-blue" type="submit" value="Отправить">
+    </label>
+</form>
