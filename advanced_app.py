@@ -123,11 +123,9 @@ def chpic():
         return render_template('change_avatar.html')
     if request.method == 'POST':
         if 'file' not in request.files:
-            print("FAIL1")
             return redirect(request.url)
         file = request.files['file']
         if file.filename == '':
-            print("FAIL2")
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -136,7 +134,6 @@ def chpic():
             file.save(os.path.join(UPLOAD_FOLDER, system_name + ext))
             users = mongo.db.users
             users.update_one({"id": current_user.get_id()}, {'$set': {"has_avatar": ext}}, upsert=False)
-            print("UPLOADED!")
             return redirect('/profile')
         else:
             return "Extension is not allowed!"
